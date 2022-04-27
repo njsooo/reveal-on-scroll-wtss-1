@@ -89,7 +89,7 @@ function animateArticle() {
 }
 
 function toggleMenuInMobile() {
-  if ($menu.style.display === "none") {
+  if ($menu.style.display === "") {
     $menu.style.display = "block";
     $btnToggleMenu.setAttribute("aria-label", "close menu");
   } else {
