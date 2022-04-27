@@ -1,0 +1,30 @@
+#header {
+  #dot-nav-a {
+    position: fixed;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    ul {
+      li {
+        a {
+          display: block;
+          width: 20px;
+          height: 20px;
+          margin-top: 8px;
+          border-radius: 50%;
+          background-color: rgb(255 255 255 / 50%);
+        }
+        &:first-child {
+          a {
+            margin-top: 0;
+          }
+        }
+        &.on {
+          a {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@mixin switch($width: 60px, $height: 34px, $ball-width: 26px) {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 60px;
+  height: $height;
+  input[type="checkbox"] {
+    &:checked {
+      + .slider {
+        background-color: #2196f3;
+        &::before {
+          transform: translateX($ball-width);
+        }
+      }
+    }
+  }
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: $height;
+    background-color: #ccc;
+    transition: background-color 0.4s;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      width: $ball-width;
+      height: $ball-width;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 0.4s;
+    }
+  }
+}
